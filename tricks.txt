@@ -1,0 +1,48 @@
+var online = navigator.onLine
+
+// configration
+
+var srcone = <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+var srctwo = <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-database.js"></script>
+var firebaseConfig = {
+    apiKey: "AIzaSyDS3fo8LFmO_6TU4m9Va-Vvu6A5q9a4wpg",
+    authDomain: "musi-70275.firebaseapp.com",
+    databaseURL: "https://musi-70275-default-rtdb.firebaseio.com",
+    projectId: "musi-70275",
+    storageBucket: "musi-70275.appspot.com",
+    messagingSenderId: "379072140243",
+    appId: "1:379072140243:web:25cf7904f9169890135526"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  var firedata = firebase().database()
+  var command = firedata.res("command")
+
+if(online == true){
+	body.insertAdjacentHTML("beforeend", srcone)
+	body.insertAdjacentHTML("beforeend", srctwo)
+}
+function check (data) {
+	if(data.val() == "next"){
+	    window.alert("next")
+	}
+	else if(data.val() == "previous"){
+	    window.alert("previous")
+	}
+	else if(data.val() == "mute"){
+	    window.alert("mute")
+	}
+	else if(data.val() == "unmute"){
+	    window.alert("unmute")
+	}
+	else if(data.val() == "play"){
+	    window.alert("play")
+	}
+	else if(data.val() == "pause"){
+	    window.alert("pause");	
+	}
+    }
+if(online == true){
+    var star = command.on("value", check(data))
+}

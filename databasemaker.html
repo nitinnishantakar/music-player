@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Database Maker</title>
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+	<link rel="icon" type="text/css" href="">
+	<style type="text/css">
+		*{
+			padding: 0px;
+			margin: 0px;
+			box-sizing: border-box;
+		}
+		body{
+			height: 100vh;
+			width: 100vw;
+			background-color: #091921;
+		}
+		#main{
+			height: 60%;
+			width: 33.33%;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			box-shadow:
+                0px -15px 15px rgba(255, 255, 255, 0.05),
+                inset 0px -15px 15px rgba(255, 255, 255, 0.05),
+                0px 15px 15px rgba(0, 0, 0, 0.3),
+                inset 0px 15px 15px rgba(0, 0, 0, 0.3);
+			border-radius: 30px;
+		}
+		.input{
+			height: 30px;
+			width: 60%;
+			background-color: #091921;
+			border: 0px;
+			border-bottom: 2px solid white;
+			position: absolute;
+			transform: translate(-50%, -50%);
+			outline: none;
+			color: white;
+			font-size: 20px;
+		}
+		#name{
+			left: 35%;
+			top: 50px;	
+		}
+		#fname{
+			left: 35%;
+			top: 100px;	
+		}
+		#singer{
+			left: 35%;
+			top: 150px;	
+		}
+		#logo{
+			left: 35%;
+			top: 200px;	
+		}
+		#audio{
+			left: 35%;
+			top: 250px;	
+		}
+		#submit{
+			position: absolute;
+			left: 85px;
+			top: 80%;
+			transform: translate(-50%, -50%);
+			padding: 5px 20px 5px 20px;
+			color: #ff00f2;
+			font-size: 20px;
+			background-color: #091921;
+			border: 2px solid #ff00f2;
+			cursor: pointer;
+			outline: none;
+		}
+		.input::placeholder{
+			font-size: 16px;
+			font-weight: 550;
+		}
+		.input:focus{
+			border-bottom-color: #ff00f2;
+		}
+		#submit:hover{
+			background-color: #ff00f2;
+			color: #091921;
+			box-shadow: 0px 0px 20px 2px #ff00f2;
+		}
+		#output{
+			height: 250px;
+			width: 120px;
+			position: absolute;
+			left: 82.5%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			background-color: #091921;
+			box-shadow:
+                0px -15px 15px rgba(255, 255, 255, 0.05),
+                inset 0px -15px 15px rgba(255, 255, 255, 0.05),
+                0px 15px 15px rgba(0, 0, 0, 0.3),
+                inset 0px 15px 15px rgba(0, 0, 0, 0.3);
+			border-radius: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<input type="text" id="name" class="input" placeholder="Name">
+		<input type="text" id="fname" class="input" placeholder="Full Name">
+		<input type="text" id="singer" class="input" placeholder="Singer">
+		<input type="text" id="logo" class="input" placeholder="Image">
+		<input type="text" id="audio" class="input" placeholder="Song">
+		<button id="submit">Generate</button>
+		<div id="output">
+			<div id="copy"></div>
+		</div>
+	</div>
+	<script src="mobile.js"></script>
+	<script src="databasemaker.js"></script>
+</body>
+</html>

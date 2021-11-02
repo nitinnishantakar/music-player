@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Response</title>
+	<!-- <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-database.js"></script> -->
+</head>
+<body id="body" style="height: 100vh; width: 100vw; background-color: #091921">
+	<button id="create">Create</button>
+	<button id="remove">Remove</button>
+	<script type="text/javascript">
+		var makediv
+		var body = document.getElementById("body")
+		var create = document.getElementById('create')
+		var remove = document.getElementById('remove')
+		create.addEventListener("click", () => {
+			makediv = document.createElement("div")
+			body.appendChild(makediv)
+		})
+		remove.addEventListener("click", () => {
+			makediv.remove()
+		})
+	</script>
+	<!-- <script type="text/javascript">
+		var firebaseConfig = {
+		    apiKey: "AIzaSyDS3fo8LFmO_6TU4m9Va-Vvu6A5q9a4wpg",
+		    authDomain: "musi-70275.firebaseapp.com",
+		    databaseURL: "https://musi-70275-default-rtdb.firebaseio.com",
+		    projectId: "musi-70275",
+		    storageBucket: "musi-70275.appspot.com",
+		    messagingSenderId: "379072140243",
+		    appId: "1:379072140243:web:25cf7904f9169890135526"
+		  };
+		  // Initialize Firebase
+		  firebase.initializeApp(firebaseConfig);
+
+		  var command = firebase.database().ref("command")
+
+		var online = navigator.onLine
+		if (online == true){
+			command.on("value", (data) => {
+				if(data.val() == "hello"){
+					window.alert("hello")
+				}
+				command.set("")
+			})
+		}
+		else{
+			widnow.alert("you are not online")
+		}
+	</script> -->
+</body>
+</html>

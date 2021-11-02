@@ -1,0 +1,148 @@
+<!--
+
+    Music Player Created By Nitin Creations 
+    Languages Used :-
+    HTML
+    CSS
+    javascript
+    Database Used :-
+    Google Firebase
+        inisialisation
+        var firebaseConfig = {
+        apiKey: "AIzaSyDS3fo8LFmO_6TU4m9Va-Vvu6A5q9a4wpg",
+        authDomain: "musi-70275.firebaseapp.com",
+        databaseURL: "https://musi-70275-default-rtdb.firebaseio.com",
+        projectId: "musi-70275",
+        storageBucket: "musi-70275.appspot.com",
+        messagingSenderId: "379072140243",
+        appId: "1:379072140243:web:25cf7904f9169890135526"
+        };
+    credits :- Nitin Nishanta Kar
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jsstyle.css">
+    <link rel="stylesheet" href="des.css">
+    <link rel="icon" href="./logo/ek.jpg">
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.2.5/firebase-database.js"></script>
+</head>
+
+<body>
+    <div id="all">
+        <audio src="./song/ek.mp3" id="audio"></audio>
+        <div id="playlist">
+            <div id="playlistw">
+                Playlist
+                <div id="add">
+                <i id="cd" class="fa fa-compact-disc"></i>
+                <i id="headi" class="fa fa-headphones-alt"></i>
+                </div>
+            </div>
+            <div id="menu">
+            </div>
+        </div>
+        <div id="control">
+            <div id="cbar">
+                <div id="cbar1" class="cbar"></div>
+                <div id="cbar2" class="cbar"></div>
+                <div id="cbar3" class="cbar"></div>
+            </div>
+            <div id="clogo"></div>
+            <div id="cname">
+                <div id="cnname"></div>
+                <div id="cnsinger"></div>
+            </div>
+            <div id="cpan">
+                <div id="pre" class="cpan">
+                    <i class="fa fa-step-backward" id="prei"></i>
+                </div>
+                <div id="play" class="cpan">
+                    <i class="fa fa-play" id="playi"></i>
+                </div>
+                <div id="nex" class="cpan">
+                    <i class="fa fa-step-forward" id="nexi"></i>
+                </div>
+            </div>
+            <div id="cpro">
+                <div id="timea" class="time">0:00</div>
+                <div id="prom">
+                    <div id="prob"></div>
+                </div>
+                <div id="timeb" class="time">0:00</div>
+            </div>
+            <div id="crep">
+                <i class="fa fa-redo" id="repi"></i>
+            </div>
+            <div id="cshuf">
+                <i class="fa fa-random" id="shufi"></i>
+            </div>
+            <div id="cmute">
+                <i class="fa fa-volume-up" id="mutei"></i>
+            </div>
+            <div id="cvol">
+                <div id="volm">
+                    <div id="volb"></div>
+                </div>
+            </div>
+            <div id="cmus">
+                <i class="fa fa-music" id="musi"></i>
+            </div>
+        </div>
+        <div id="display">
+            <div id="dzoom">
+                <div id="dlogo">
+                    <div id="cdhole"></div>
+                    <div id="cdhole2"></div>
+                </div>
+            </div>
+            <div id="ddata">
+                <div id="dname">Dhal Jaun Main</div>
+                <div id="dsinger">Arijit Singh</div>
+            </div>
+            <input type="text" id="search" autocomplete="off" placeholder="Search">
+            <div id="searchicon">
+                <i id="siconi" class="fa fa-search"></i>
+            </div>
+            <i id="cdask" class="fa fa-circle-notch"></i>
+            <i id="refreshicon" class="fa fa-sync-alt"></i>
+            <i id="interneticon" class="fa fa-globe-africa"></i>
+        </div>
+    </div>
+    <div id="addcover">
+        <div id="adlogo">
+            <div id="adcenter">
+                <i id="admusic" class="fa fa-music"></i> Tunes <br>
+            </div>
+            <span id="adpower">Powered By Nitin Creations</span>
+            <div id="ins">
+                <span id="adeenter">Press <span id="adenter">Space</span> to Continue.</span>
+            </div>
+        </div>
+    </div>
+    <script src="variables.js"></script>
+    <script src="database.js"></script>
+    <script src="main.js"></script>
+    <script src="additional.js"></script>
+    <script src="reload.js"></script>
+    <script src="des.js"></script>
+    <script src="cd.js"></script>
+    <script src="search.js"></script>
+    <script src="refresh.js"></script>
+    <script src="duration.js"></script>
+    <script src="progress.js"></script>
+    <script src="command.js"></script>
+    <script src="display.js"></script>
+    <script src="volume.js"></script>
+</body>
+
+</html>
